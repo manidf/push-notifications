@@ -1,0 +1,17 @@
+{
+  "name": "push-notifications",
+  "version": "0.0.1",
+  "description": "Proof of concept of push notifications for the open web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "push",
+    "api",
+    "push",
+    "noticifations"
+  ],
+  "author": "Mannuel Ferreira",
+  "license": "ISC"
+}
