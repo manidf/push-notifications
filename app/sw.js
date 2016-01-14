@@ -2,19 +2,29 @@
 // background to handle push messages without requiring a web page to be open.
 
 console.log('Started', self);
-
-// self refers to the ServiceWorkerGlobalScope object: the Service worker itself
 self.addEventListener('install', function(event) {
-    // Service worker will skip the waiting state and immediately activate
-    self.skipWaiting();
-    console.log('Installed', event);
+	self.skipWaiting();
+	console.log('Installed', event);
 });
-
 self.addEventListener('activate', function(event) {
-   console.log('Activated', event);
+	console.log('Activated', event);
+});
+self.addEventListener('push', function(event) {
+	console.log('Push message', event);
+	var title = 'Push message';
+	event.waitUntil(
+		self.registration.showNotification(title, {
+			body: 'Hello Superbalista!! FLASH SALE! This text will flash if you stare at it long enough...promise',
+			icon: 'images/icon.png',
+			tag: 'my-tag'
+		}));
 });
 
-self.addEventListener('push', function(event) {
-   console.log('Push message recieved', event);
-    // TODO
-});
+// TODO
+
+
+// 1
+// self refers to the ServiceWorkerGlobalScope object: the Service worker itself
+
+// 2
+// Service worker will skip the waiting state and immediately activate

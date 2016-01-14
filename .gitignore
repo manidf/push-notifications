@@ -1,4 +1,5 @@
 .idea
 /presi
-/push-notifications
+/gcm-playground
+/push-notification
 /node_modules

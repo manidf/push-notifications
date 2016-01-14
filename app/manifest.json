@@ -1,4 +1,9 @@
 {
   "name": "Push Notifications",
-  "gcm_sender_id": "873624854335"
+	"icons": [{
+		"src": "images/icon.png",
+		"sizes": "120x120",
+		"type": "image/png"
+	}],
+  "gcm_sender_id": "515092051688"
 }
