@@ -9,5 +9,15 @@ this.onpush = function(event) {
 
 // https://example.com/webapp.js
 navigator.serviceWorker.register('serverworker.js').then(
-  
+  function(serviceWorkerRegistration) {
+    serviceWorkerRegistration.pushManager.subscribe().then(
+      function(pushSubscription) {
+        console.log(pushSubscription.endpoint);
+        console.log(pushSubscription.getKey('p256dh'));
+        console.log(pushSubscription.getKey('auth'));
+      }, function(error) {
+        console.log(error);
+      }
+    )
+  }
 );
